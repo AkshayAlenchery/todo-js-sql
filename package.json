@@ -1,0 +1,28 @@
+{
+  "name": "todo-js-sql",
+  "version": "1.0.0",
+  "description": "A todo app ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkshayAlenchery/todo-js-sql.git"
+  },
+  "author": "Akshay Alenchery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkshayAlenchery/todo-js-sql/issues"
+  },
+  "homepage": "https://github.com/AkshayAlenchery/todo-js-sql#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^7.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
