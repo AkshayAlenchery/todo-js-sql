@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/jquery-ui.min.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1 id="logo"><i class="far fa-calendar-check"></i> Todo App</h1>
+    <div id="container">
+      <div id="list-container">
+        <div id="list-form">
+          <input type="text" id="list-add-form" placeholder="Search | Add new list" />
+        </div>
+        <div>
+          <div class="list">
+            <p>Todo App</p>
+            <i class="far fa-trash-alt red"></i>
+          </div>
+          <div class="list">
+            <p>Shopping List</p>
+            <i class="far fa-trash-alt red"></i>
+          </div>
+          <div class="list">
+            <p>Office Work</p>
+            <i class="far fa-trash-alt red"></i>
+          </div>
+        </div>
+      </div>
+      <div id="todo-main-container">
+        <div id="todo-container">
+          <div id="todo-header">
+            <i class="fas fa-chevron-circle-left"></i>
+            <p>Todo App</p>
+            <input
+              type="text"
+              id="edit-list-name"
+              class="hide"
+              placeholder="Enter a new list name"
+            />
+            <i class="fas fa-edit"></i>
+          </div>
+          <div id="todo-form">
+            <input type="text" id="todo-add-form" placeholder="Add a new todo" />
+          </div>
+          <div>
+            <div class="todo">
+              <input type="checkbox" />
+              <p>Complete todo app soon</p>
+              <div></div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" />
+              <p>Complete todo app soon</p>
+              <div></div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" />
+              <p>Complete todo app soon</p>
+              <div></div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" />
+              <p>Complete todo app soon</p>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div id="todo-edit-container"></div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/0c19aea2d1.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
