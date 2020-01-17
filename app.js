@@ -1,10 +1,12 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const routes = require('./server/routes/index.routes')
+const cors = require('cors')
 const app = express()
 
 dotenv.config()
 app.use(express.json())
+app.use(cors())
 app.use('/api/v1.0', routes)
 
 app.listen(process.env.APP_PORT, () =>

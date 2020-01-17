@@ -21,4 +21,4 @@ CREATE TABLE "todos" (
   "note" TEXT DEFAULT null
 );
 
-ALTER TABLE "todos" ADD FOREIGN KEY ("list_id") REFERENCES "lists" ("list_id");
+ALTER TABLE "todos" ADD FOREIGN KEY ("list_id") REFERENCES "lists" ("list_id") ON DELETE CASCADE;

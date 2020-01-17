@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+/* Basic CSS */
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #f7f7f7;
@@ -9,205 +11,292 @@ body {
   text-align: center;
   margin-top: 50px;
   color: #3f3844;
+  font-size: 2em;
 }
 
-#container {
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#errors {
+  display: none;
+  background: #ff5952;
+  padding: 20px 10px;
+  color: #fff;
+  text-align: center;
 }
 
 #list-container {
-  display: none;
-  width: 80%;
   background: #fff;
-  border: 1px solid #edf2f7;
   padding: 20px;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
-#list-form {
+#list-add-form {
   display: flex;
-  margin-bottom: 10px;
 }
 
-#list-form input {
+#list-add-form input {
   flex: 1;
   padding: 10px;
   border: 1px solid #edf2f7;
 }
 
-.list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  cursor: pointer;
+#lists {
+  margin-top: 20px;
 }
 
-.list:hover {
-  background: #edf2f7;
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .list p {
-  width: 90%;
+  width: 94%;
+  color: #3f3844;
   font-weight: 600;
 }
 
 .list i {
   width: 4%;
-}
-
-#todo-main-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: #ff5952;
 }
 
 #todo-container {
-  width: 90%;
   background: #fff;
-  border: 1px solid #edf2f7;
-  margin-bottom: 20px;
 }
 
 #todo-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
   border-bottom: 1px solid #edf2f7;
 }
 
+#todo-header i {
+  width: 2%;
+}
+
 #todo-header p {
-  font-weight: 600;
-  font-size: 1.2em;
-  width: 82%;
+  width: 95%;
   text-align: center;
+  color: #3f3844;
+  font-weight: 600;
 }
 
 #todo-header input {
-  width: 70%;
+  width: 80%;
+  text-align: center;
   padding: 10px;
+  border: 1px solid #edf2f7;
 }
 
-#todo-header i {
-  width: 3%;
-}
-
-#todo-form {
+#todo-add-form {
   display: flex;
   padding: 20px 20px 10px 20px;
 }
 
-#todo-form input {
+#todo-add-form input {
   flex: 1;
   padding: 10px;
   border: 1px solid #edf2f7;
 }
 
+#todos {
+  padding: 0 20px 20px 20px;
+}
+
 .todo {
-  padding: 0px 20px 5px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.todo i:first-child {
-  width: 3%;
+.todo input {
+  width: 5%;
 }
 
-.todo p:nth-child(2) {
-  width: 60%;
-}
-
-.todo div:last-child {
-  width: 30%;
+.todo p {
+  width: 90%;
+  font-weight: 500;
 }
 
 #todo-edit-container {
-  display: none;
-  background: #fff;
-  width: 80%;
-  padding: 20px;
-  height: 200px;
+  background: white;
 }
 
-/* Desktop version */
+#todo-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #edf2f7;
+}
 
-@media only screen and (min-width: 768px) {
-  #container {
-    max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
+#todo-edit-header p {
+  width: 80%;
+  font-weight: bold;
+  color: #3f3844;
+}
+
+#todo-edit-header i {
+  width: 5%;
+}
+
+#todo-edit-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#todo-edit-info input[type='text'] {
+  padding: 10px;
+  border: 1px solid #edf2f7;
+  margin-bottom: 20px;
+}
+
+#edit-input-grp {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#todo-edit-info textarea {
+  border: 1px solid #edf2f7;
+  padding: 10px;
+}
+
+/* Small & Medium device CSS */
+@media (max-width: 768px) {
+  body {
+    letter-spacing: 1px;
   }
 
-  #list-container {
-    width: 35%;
-    display: none;
+  #app-container {
+    width: 95%;
+    margin: 50px auto;
   }
 
-  #todo-main-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-
-  #todo-container {
-    width: 60%;
-    background: #fff;
-    border: 1px solid #edf2f7;
-  }
-
-  #todo-edit-container {
-    display: none;
-    background: #fff;
-    width: 30%;
-    height: 200px;
-  }
-  #todo-header p {
-    font-weight: 600;
-    font-size: 1.2em;
-    width: 82%;
-    text-align: center;
+  #todo-header {
+    padding: 15px;
   }
 
   #todo-header i {
-    width: 3%;
+    width: 5%;
   }
 
-  #todo-header input {
-    width: 82%;
+  #todo-edit-header {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  #edit-input-grp input {
+    width: 46%;
     padding: 10px;
+    border: 1px solid #edf2f7;
+    background: #f8f8f8;
+  }
+
+  #edit-input-grp select {
+    width: 46%;
+    padding: 10px;
+    border: 1px solid #edf2f7;
+    background: #f8f8f8;
+  }
+}
+
+/* Desktop CSS */
+@media (min-width: 992px) {
+  body {
+    letter-spacing: 1.5px;
+  }
+
+  #app-container {
+    width: 1000px;
+    margin: 50px auto;
+  }
+
+  #list-container {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  #todo-header {
+    padding: 20px;
+  }
+
+  #todo-header i {
+    width: 5%;
+  }
+
+  #todo-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  #todo-edit-container {
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  #todo-edit-header {
+    padding: 20px;
+  }
+
+  #edit-input-grp input {
+    width: 47%;
+    padding: 10px;
+    background: #f8f8f8;
+    border: 1px solid #edf2f7;
+  }
+
+  #edit-input-grp select {
+    width: 47%;
+    padding: 10px;
+    background: #f8f8f8;
+    border: 1px solid #edf2f7;
   }
 }
 
 /* Helper classes */
 
+.error {
+  border: 1px solid #ff5952;
+}
+
+.error::-webkit-input-placeholder {
+  color: #ff5952;
+}
+
+i {
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }
 
-.red {
-  color: hsl(348, 100%, 61%);
+.flex {
+  display: flex;
 }
 
-.yellow {
-  color: hsl(48, 100%, 67%);
+.block {
+  display: block;
 }
 
-.green {
-  color: hsl(141, 53%, 53%);
+.inline {
+  display: inline;
 }
 
-.error {
-  border: 1px solid red !important;
+.list p,
+.todo p {
+  cursor: pointer;
 }
 
-.error::-webkit-input-placeholder {
-  color: red;
+.completed {
+  text-decoration: line-through;
+}
+
+.high {
+  color: #ff5952;
+}
+
+.medium {
+  color: #ffd656;
 }

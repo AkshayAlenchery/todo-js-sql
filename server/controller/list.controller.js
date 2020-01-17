@@ -33,10 +33,10 @@ const createList = async (req, res) => {
  */
 const loadAllLists = async (req, res) => {
   try {
-    const sql = 'SELECT * FROM lists'
+    const sql = 'SELECT * FROM lists ORDER BY list_id ASC'
     const result = await db.executeQuery(sql)
     if (result.rowCount > 0) {
-      res.status(200).json(result.rows)
+      return res.status(200).json(result.rows)
     }
     res.status(200).json({ listCount: 0, message: 'No lists present' })
   } catch (err) {

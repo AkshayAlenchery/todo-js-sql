@@ -40,7 +40,7 @@ const loadAllTodo = async (req, res) => {
     let sql = 'SELECT * FROM lists WHERE list_id = $1'
     let result = await db.executeQuery(sql, [listId])
     if (result.rowCount > 0) {
-      sql = 'SELECT * FROM todos WHERE list_id = $1'
+      sql = 'SELECT * FROM todos WHERE list_id = $1 ORDER BY priority DESC, scheduled DESC'
       result = await db.executeQuery(sql, [listId])
       if (result.rowCount > 0) res.status(200).json(result.rows)
       else res.status(200).json({ todoCount: 0, message: 'No todos present' })
